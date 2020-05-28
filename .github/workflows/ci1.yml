@@ -13,6 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Go work
+    - name: Init
       run: |
-        echo Get Python path: `which python`
+        [ -n "`which python3`" ] && python3 index.py
