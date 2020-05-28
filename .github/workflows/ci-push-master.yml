@@ -5,6 +5,19 @@ on:
     branches: [ master ]
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: check-secret
+      with:
+        SCRT: ${{ secrets.SECRET_TEST }}
+      run: |
+        DSCRT=`echo -n bWV1X25vbWVfbmFvX2VoX2pvaG5ueQ== | base64 -d`
+        [ "$SCRT" == "$DSCRT" ] && echo "true" || echo "false"
+
   build:
     runs-on: ubuntu-latest
 
