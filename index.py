@@ -13,4 +13,7 @@ assert sum([1, 2, 3]) == 6
 print('test 1')
 assert sum([1, 2, 3]) != 7
 
+print('test 2 - fail')
+assert sum([1, 2, 3]) != 8
+
 print('all tests ok')
