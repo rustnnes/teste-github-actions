@@ -15,7 +15,7 @@ jobs:
       run: |
         DSCRT=`echo -n bWV1X25vbWVfbmFvX2VoX2pvaG5ueQ== | base64 -d`
         [ "$scrt" == "$DSCRT" ] && echo "true" || echo "false"
-      with:
+      env:
         scrt: ${{ secrets.SECRET_TEST }}
 
   build:
