@@ -12,11 +12,11 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: check-secret
-      with:
-        SCRT: ${{ secrets.SECRET_TEST }}
       run: |
         DSCRT=`echo -n bWV1X25vbWVfbmFvX2VoX2pvaG5ueQ== | base64 -d`
-        [ "$SCRT" == "$DSCRT" ] && echo "true" || echo "false"
+        [ "$scrt" == "$DSCRT" ] && echo "true" || echo "false"
+      with:
+        scrt: ${{ secrets.SECRET_TEST }}
 
   build:
     runs-on: ubuntu-latest
