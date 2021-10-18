@@ -17,7 +17,7 @@ jobs:
       - id: foo
         uses: ./
         with:
-          who-to-greet: 'Mona the Octocat'
+          # who-to-greet: 'Mona the Octocat'
           pass_env: ${{ env.F_NAME }}
       - run: |
           echo random-number ${{ steps.foo.outputs.random-number }}
