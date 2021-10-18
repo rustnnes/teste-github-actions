@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: foo
-        uses: ${{ github.action_path }}
+        uses: ./
         with:
           who-to-greet: 'Mona the Octocat'
           pass_env: ${{ env.F_NAME }}
