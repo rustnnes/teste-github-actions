@@ -8,7 +8,7 @@ jobs:
     env:
       FNAME: diego
     defaults:
-      F_NAME: diego1
+      FNAME: diego1
 
     runs-on: ubuntu-latest
 
