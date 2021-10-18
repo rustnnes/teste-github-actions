@@ -3,16 +3,23 @@ name: Main CI
 on:
   workflow_dispatch
 
+inputs:
+  numOctocats:
+    description: 'Number of Octocats'
+    required: false
+    default: '1'
+  octocatEyeColor:
+    description: 'Eye color of the Octocats'
+    required: true
+
 jobs:
   test:
     env:
       FNAME: diego
-    defaults:
-      FNAME: diego1
 
     runs-on: ubuntu-latest
 
     steps:
     - name: gogogo
       run: |
-        echo ${{ env.F_NAME }}
+        echo ${{ env.F_NAME }} ${{ inputs.numOctocats }}
