@@ -6,7 +6,7 @@ on:
 jobs:
   test:
     env:
-      F_NAME: diego
+      FNAME: diego
     defaults:
       F_NAME: diego1
 
