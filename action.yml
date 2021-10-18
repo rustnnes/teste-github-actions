@@ -10,7 +10,7 @@ inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
-    default: 'World'
+    # default: 'World'
   pass_env:  # id of input
     description: 'receive env var'
     required: true
